@@ -21,23 +21,23 @@
 		"commands": [
 			{
 				"command": "libman.init",
-				"title": "LibMan: Init"
+				"title": "LibMan: Init (via Terminal)"
 			},
 			{
 				"command": "libman.restore",
-				"title": "LibMan: Restore"
+				"title": "LibMan: Restore (via Terminal)"
 			},
 			{
 				"command": "libman.install",
-				"title": "LibMan: Install"
+				"title": "LibMan: Install (via Terminal)"
 			},
 			{
 				"command": "libman.uninstall",
-				"title": "LibMan: Uninstall"
+				"title": "LibMan: Uninstall (via Terminal)"
 			},
 			{
 				"command": "libman.clean",
-				"title": "LibMan: Clean"
+				"title": "LibMan: Clean (via Terminal)"
 			}
 		],
 		"menus": {
