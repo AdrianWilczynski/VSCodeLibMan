@@ -15,6 +15,12 @@
 	"categories": [
 		"Other"
 	],
+	"keywords": [
+		"LibMan",
+		"LibraryManager",
+		"Package",
+		"Library"
+	],
 	"activationEvents": [
 		"onCommand:libman.init",
 		"onCommand:libman.restore",
