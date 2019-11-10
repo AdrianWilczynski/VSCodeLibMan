@@ -1,9 +1,8 @@
 import * as vscode from 'vscode';
-import { SearchResultsProvider } from './common';
+import { SearchResultsProvider } from './searchResults';
 
 export async function show(placeHolder: string, resultsProvider: SearchResultsProvider) {
     let query: string | undefined;
-    let picked: string | undefined;
 
     do {
         query = await vscode.window.showInputBox({
@@ -14,12 +13,12 @@ export async function show(placeHolder: string, resultsProvider: SearchResultsPr
             return;
         }
 
-        const results = await resultsProvider(query);
-        if (results.length === 0) {
+        const searchResults = await resultsProvider(query);
+        if (searchResults.length === 0) {
             continue;
         }
 
-        picked = await vscode.window.showQuickPick(results);
+        const picked = await vscode.window.showQuickPick(searchResults);
         if (picked) {
             return picked;
         }

@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { Command } from './common';
+import { Command } from './commands';
 
 export function handle(action: Command): Command {
     return async (uri?: vscode.Uri) => {

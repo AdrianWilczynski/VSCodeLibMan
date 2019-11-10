@@ -1,5 +1,5 @@
 import * as vscode from 'vscode';
-import { SearchResultsProvider } from "./common";
+import { SearchResultsProvider } from "./searchResults";
 import * as cdnjs from './cdnjs';
 import * as npm from './npm';
 

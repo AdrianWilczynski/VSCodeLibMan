@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { searchResultCount } from './common';
+import { searchResultCount } from './searchResults';
 
 function url(query: string) {
     return `https://api.cdnjs.com/libraries?search=${query}`;

@@ -5,6 +5,8 @@ import * as terminal from './terminal';
 import * as searchBox from './searchBox';
 import * as libmanJson from './libmanJson';
 
+export type Command = (uri?: vscode.Uri) => Promise<void>;
+
 export async function init(uri?: vscode.Uri) {
     const defaultProvider = await vscode.window.showQuickPick(providers, {
         placeHolder: '--default-provider'
