@@ -8,7 +8,7 @@ export async function sendText(text: string, cwd?: string) {
     }
 
     terminal = vscode.window.createTerminal({
-        name: 'Libman',
+        name: 'LibMan',
         cwd: cwd
     });
     terminal.sendText(text, false);
