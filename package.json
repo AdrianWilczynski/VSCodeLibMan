@@ -2,6 +2,7 @@
 	"name": "libman",
 	"displayName": "LibMan Tools",
 	"description": "Basic LibMan support for VSCode",
+	"publisher": "adrianwilczynski",
 	"icon": "img/icon.png",
 	"repository": {
 		"type": "git",

@@ -14,7 +14,7 @@ export async function init(uri?: vscode.Uri) {
 
     const defaultProviderOption = defaultProvider ? ` --default-provider ${defaultProvider.label}` : '';
 
-    terminal.sendText('libman init' + defaultProviderOption, uri && uri.fsPath);
+    terminal.sendText('libman init' + defaultProviderOption, uri?.fsPath);
 }
 
 export async function restore(uri?: vscode.Uri) {
@@ -23,7 +23,6 @@ export async function restore(uri?: vscode.Uri) {
 
 export async function install(uri?: vscode.Uri) {
     const defaultProviderName = await libmanJson.defaultProvider(uri!);
-
     const defaultProvider = providers.find(p => p.label === defaultProviderName);
 
     const pickedProvider = await vscode.window.showQuickPick(providers, {
