@@ -32,9 +32,10 @@ export async function install(uri?: vscode.Uri) {
     });
 
     const useDefaultProvider = !!defaultProvider && (!pickedProvider || defaultProvider === pickedProvider);
-    const searchResultProvider = useDefaultProvider && defaultProvider && defaultProvider.searchResultProvider ? defaultProvider.searchResultProvider
-        : !useDefaultProvider && pickedProvider && pickedProvider.searchResultProvider ? pickedProvider.searchResultProvider
-            : undefined;
+
+    const searchResultProvider = useDefaultProvider
+        ? defaultProvider?.searchResultProvider
+        : pickedProvider?.searchResultProvider;
 
     const library = searchResultProvider && await searchBox.show('[libraryId]', searchResultProvider);
 

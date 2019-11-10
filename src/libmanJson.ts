@@ -12,15 +12,9 @@ export async function defaultProvider(uri: vscode.Uri) {
 }
 
 export async function libraries(uri: vscode.Uri): Promise<string[]> {
-    const libmanJson = await read(uri);
-
-    if (!libmanJson.libraries) {
-        return [];
-    }
-
-    return libmanJson.libraries
-        .filter(l => !!l.library)
-        .map(l => l.library as string);
+    return (await read(uri)).libraries
+        ?.filter(l => !!l.library)
+        .map(l => l.library as string) || [];
 }
 
 async function read(uri: vscode.Uri) {
