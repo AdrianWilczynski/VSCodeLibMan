@@ -1,8 +1,12 @@
 {
 	"name": "libman",
 	"displayName": "LibMan Tools",
-	"description": "",
+	"description": "Basic LibMan support for VSCode",
 	"icon": "img/icon.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/AdrianWilczynski/VSCodeLibMan.git"
+	},
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.40.0"
