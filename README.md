@@ -16,3 +16,11 @@ Basic LibMan support for VSCode
     - `LibMan: Clean (via Terminal)`
 - `libman.json` autocompletion and validation through official JSON schema (https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-vs?view=aspnetcore-3.0#manually-configure-libman-manifest-file-entries).
 
+## Requirements
+
+- LibMan CLI (https://docs.microsoft.com/en-us/aspnet/core/client-side/libman/libman-cli)
+
+To install LibMan CLI run:
+```cmd
+dotnet tool install --global Microsoft.Web.LibraryManager.Cli
+```
